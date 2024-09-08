@@ -50,13 +50,23 @@ struct RoutinesView: View {
                 }
 
                 Spacer()
+
+                // "Next" button to navigate to the DailyView at the bottom
+                NavigationLink(destination: DailyView()) {
+                    Text("View Today's Routines")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.bottom, 20)
             }
             .navigationBarItems(
-                leading: Button(action: {
-                    logout() // Logout function
-                }) {
-                    Text("Logout")
-                        .foregroundColor(.red)
+                leading: NavigationLink(destination: AccountSettingsView()) {
+                    Text("Account Settings")
+                        .foregroundColor(.orange)
                 },
                 trailing: Button(action: {
                     self.selectedRoutine = nil
@@ -70,11 +80,12 @@ struct RoutinesView: View {
                 AddEditRoutineView(currentUser: $currentUser, routine: $selectedRoutine, isPresented: $showingAddRoutineView)
             }
             .onAppear {
-                loadCurrentUser() // Fetch the current user
+                loadCurrentUser() // Fetch the current user and authenticate
             }
         }
     }
 
+    // Load the current user based on the stored userId and authenticate
     private func loadCurrentUser() {
         if let userIdString = UserDefaults.standard.string(forKey: "userId"),
            let userId = UUID(uuidString: userIdString) {
@@ -82,20 +93,19 @@ struct RoutinesView: View {
                 let users = try modelContext.fetch(FetchDescriptor<User>())
                 if let user = users.first(where: { $0.id == userId }) {
                     currentUser = user
+                    isAuthenticated = true // Authenticate if the user is found
                 } else {
                     print("User not found.")
+                    isAuthenticated = false
                 }
             } catch {
                 print("Error fetching user: \(error)")
+                isAuthenticated = false
             }
         } else {
             print("No userId found in UserDefaults.")
+            isAuthenticated = false
         }
-    }
-
-    private func logout() {
-        UserDefaults.standard.removeObject(forKey: "userId")
-        isAuthenticated = false
     }
 
     func deleteRoutine(at offsets: IndexSet) {

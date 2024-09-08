@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */; };
 		DFAED2752C8742BE00ED2CAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2742C8742BE00ED2CAD /* ContentView.swift */; };
-		DFAED2772C8742BE00ED2CAD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2762C8742BE00ED2CAD /* Item.swift */; };
+		DFAED2772C8742BE00ED2CAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2762C8742BE00ED2CAD /* User.swift */; };
 		DFAED2792C8742C100ED2CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAED2782C8742C100ED2CAD /* Assets.xcassets */; };
 		DFAED27C2C8742C100ED2CAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAED27B2C8742C100ED2CAD /* Preview Assets.xcassets */; };
 		DFAED2832C877DE600ED2CAD /* SignUpSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2822C877DE600ED2CAD /* SignUpSignInView.swift */; };
@@ -20,13 +20,15 @@
 		DFAED28D2C8782F800ED2CAD /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED28C2C8782F800ED2CAD /* Routine.swift */; };
 		DFAED28F2C87831A00ED2CAD /* AddEditRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */; };
 		DFAED2912C87833700ED2CAD /* MultiSelectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */; };
+		DFED9A9F2C8DE1B9000A82D8 /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */; };
+		DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFAED26F2C8742BE00ED2CAD /* AchieveMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AchieveMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveMateApp.swift; sourceTree = "<group>"; };
 		DFAED2742C8742BE00ED2CAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DFAED2762C8742BE00ED2CAD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DFAED2762C8742BE00ED2CAD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFAED2782C8742C100ED2CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFAED27B2C8742C100ED2CAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFAED2822C877DE600ED2CAD /* SignUpSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSignInView.swift; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		DFAED28C2C8782F800ED2CAD /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRoutineView.swift; sourceTree = "<group>"; };
 		DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectPicker.swift; sourceTree = "<group>"; };
+		DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
+		DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 			children = (
 				DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */,
 				DFAED2742C8742BE00ED2CAD /* ContentView.swift */,
-				DFAED2762C8742BE00ED2CAD /* Item.swift */,
+				DFAED2762C8742BE00ED2CAD /* User.swift */,
 				DFAED2782C8742C100ED2CAD /* Assets.xcassets */,
 				DFAED27A2C8742C100ED2CAD /* Preview Content */,
 				DFAED2822C877DE600ED2CAD /* SignUpSignInView.swift */,
@@ -82,6 +86,8 @@
 				DFAED28C2C8782F800ED2CAD /* Routine.swift */,
 				DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */,
 				DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */,
+				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
+				DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */,
 			);
 			path = AchieveMate;
 			sourceTree = "<group>";
@@ -164,15 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFED9A9F2C8DE1B9000A82D8 /* DailyView.swift in Sources */,
 				DFAED2752C8742BE00ED2CAD /* ContentView.swift in Sources */,
 				DFAED28B2C87829B00ED2CAD /* RoutinesView.swift in Sources */,
 				DFAED2892C87809A00ED2CAD /* SignInView.swift in Sources */,
 				DFAED28F2C87831A00ED2CAD /* AddEditRoutineView.swift in Sources */,
 				DFAED2852C877E0600ED2CAD /* InstructionsView.swift in Sources */,
-				DFAED2772C8742BE00ED2CAD /* Item.swift in Sources */,
+				DFAED2772C8742BE00ED2CAD /* User.swift in Sources */,
 				DFAED28D2C8782F800ED2CAD /* Routine.swift in Sources */,
 				DFAED2832C877DE600ED2CAD /* SignUpSignInView.swift in Sources */,
 				DFAED2872C87808F00ED2CAD /* SignUpView.swift in Sources */,
+				DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */,
 				DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */,
 				DFAED2912C87833700ED2CAD /* MultiSelectPicker.swift in Sources */,
 			);
