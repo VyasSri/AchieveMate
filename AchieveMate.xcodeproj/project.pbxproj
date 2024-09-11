@@ -22,6 +22,7 @@
 		DFAED2912C87833700ED2CAD /* MultiSelectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */; };
 		DFED9A9F2C8DE1B9000A82D8 /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */; };
 		DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */; };
+		DFED9AA32C9100F9000A82D8 /* WeekPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectPicker.swift; sourceTree = "<group>"; };
 		DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
 		DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
+		DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */,
 				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
 				DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */,
+				DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */,
 			);
 			path = AchieveMate;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				DFAED2772C8742BE00ED2CAD /* User.swift in Sources */,
 				DFAED28D2C8782F800ED2CAD /* Routine.swift in Sources */,
 				DFAED2832C877DE600ED2CAD /* SignUpSignInView.swift in Sources */,
+				DFED9AA32C9100F9000A82D8 /* WeekPlanView.swift in Sources */,
 				DFAED2872C87808F00ED2CAD /* SignUpView.swift in Sources */,
 				DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */,
 				DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */,

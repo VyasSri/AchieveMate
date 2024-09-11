@@ -50,24 +50,37 @@ struct DailyView: View {
                                 Button(action: {
                                     markRoutineCompleted(routine: routine)
                                 }) {
-                                    Text(completedRoutines.contains(routine.id) ? "Completed" : "Mark Complete")
+                                    Text(routine.isCompleted ? "Completed" : "Mark Complete")
                                         .padding()
-                                        .background(completedRoutines.contains(routine.id) ? Color.gray : Color.blue)
+                                        .background(routine.isCompleted ? Color.gray : Color.blue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                 }
-                                .disabled(completedRoutines.contains(routine.id)) // Disable button if completed
+                                .disabled(routine.isCompleted) // Disable button if completed
                             }
                         }
                     }
                 }
 
                 Spacer()
+
+                // Week Plan button to navigate to the WeekPlanView
+                NavigationLink(destination: WeekPlanView(currentUser: currentUser)) {
+                    Text("Week Plan")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.bottom, 20)
             }
             .onAppear {
                 loadCurrentUser()
                 loadTodaysRoutines()
             }
+            .navigationBarTitle("Daily View", displayMode: .inline) // Ensures this is a separate screen
         }
     }
 
@@ -91,6 +104,11 @@ struct DailyView: View {
     private func markRoutineCompleted(routine: Routine) {
         guard let user = currentUser else { return }
 
+        // Check if the routine is already completed
+        if routine.isCompleted {
+            return // Exit if the routine is already completed
+        }
+
         // Add points based on the routine's importance level
         var pointsAdded = 0
         switch routine.importanceLevel {
@@ -105,11 +123,14 @@ struct DailyView: View {
             user.points += 20
         }
 
+        // Mark the routine as completed
+        routine.isCompleted = true
+
         // Add the routine to the set of completed routines
         completedRoutines.insert(routine.id)
 
-        // Save the user's updated points
-        saveUserPoints(user: user)
+        // Save the user's updated points and routine completion state
+        saveUserPointsAndRoutine(user: user)
 
         // Reload total points
         totalPoints = user.points
@@ -123,12 +144,12 @@ struct DailyView: View {
         }
     }
 
-    // Save the updated points for the user
-    private func saveUserPoints(user: User) {
+    // Save the updated points for the user and the routine's completion state
+    private func saveUserPointsAndRoutine(user: User) {
         do {
-            try modelContext.save()
+            try modelContext.save() // Save both user points and the routine's isCompleted state
         } catch {
-            print("Error saving user points: \(error)")
+            print("Error saving user points or routine completion state: \(error)")
         }
     }
 
@@ -146,11 +167,5 @@ struct DailyView: View {
                 print("Error fetching user: \(error)")
             }
         }
-    }
-}
-
-struct DailyView_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyView()
     }
 }

@@ -13,6 +13,7 @@ class Routine: Identifiable {
     var frequencyPerWeek: Int
     var specificDays: [String]
     var importanceLevelRawValue: String // Store raw value instead of enum
+    var isCompleted: Bool = false // New flag to track completion
 
     // Computed property to get/set the enum
     var importanceLevel: ImportanceLevel {
@@ -31,5 +32,6 @@ class Routine: Identifiable {
         self.frequencyPerWeek = frequencyPerWeek
         self.specificDays = specificDays
         self.importanceLevelRawValue = importanceLevel.rawValue
+        self.isCompleted = false // Default is not completed
     }
 }
