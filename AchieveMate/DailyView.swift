@@ -8,6 +8,7 @@ struct DailyView: View {
     @State private var totalPoints: Int = 0
     @State private var completedRoutines: Set<UUID> = [] // Track completed routines
     @State private var confirmationMessage: String? = nil // Message for points added
+    @State private var showWeekPlan = false // Control when to show the Week Plan as a sheet
 
     let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -64,8 +65,10 @@ struct DailyView: View {
 
                 Spacer()
 
-                // Week Plan button to navigate to the WeekPlanView
-                NavigationLink(destination: WeekPlanView(currentUser: currentUser)) {
+                // Week Plan button to present the WeekPlanView as a sheet (popup)
+                Button(action: {
+                    showWeekPlan = true // Trigger the sheet to show
+                }) {
                     Text("Week Plan")
                         .font(.headline)
                         .padding()
@@ -75,12 +78,14 @@ struct DailyView: View {
                         .cornerRadius(10)
                 }
                 .padding(.bottom, 20)
+                .sheet(isPresented: $showWeekPlan) {
+                    WeekPlanView(currentUser: currentUser) // Present WeekPlanView as a sheet
+                }
             }
             .onAppear {
                 loadCurrentUser()
                 loadTodaysRoutines()
             }
-            .navigationBarTitle("Daily View", displayMode: .inline) // Ensures this is a separate screen
         }
     }
 
@@ -167,5 +172,11 @@ struct DailyView: View {
                 print("Error fetching user: \(error)")
             }
         }
+    }
+}
+
+struct DailyView_Previews: PreviewProvider {
+    static var previews: some View {
+        DailyView()
     }
 }
