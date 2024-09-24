@@ -18,5 +18,29 @@ class User: Identifiable {
         self.routines = routines
         self.points = points
     }
+    // returns the user's ID
+    func getId() -> UUID{
+        return id
+    }
+    // returns the user's name
+    func getName() -> String{
+        return name
+    }
+    // returns the user's email
+    func getEmail() -> String{
+        return email
+    }
+    // returns the user's password
+    func getPassword() -> String{
+        return password
+    }
+    // returns the user's routines
+    func getRoutines() -> [Routine]{
+        return routines
+    }
+    //returns the amount of points the user has
+    func getPoints() ->Int{
+        return points
+    }
 }
 

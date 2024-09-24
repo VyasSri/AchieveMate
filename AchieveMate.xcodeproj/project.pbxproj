@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D5EF7F2CA27BFE00047514 /* PointPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5EF7E2CA27BFE00047514 /* PointPageView.swift */; };
 		DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */; };
 		DFAED2752C8742BE00ED2CAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2742C8742BE00ED2CAD /* ContentView.swift */; };
 		DFAED2772C8742BE00ED2CAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2762C8742BE00ED2CAD /* User.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0D5EF7E2CA27BFE00047514 /* PointPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPageView.swift; sourceTree = "<group>"; };
 		DFAED26F2C8742BE00ED2CAD /* AchieveMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AchieveMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveMateApp.swift; sourceTree = "<group>"; };
 		DFAED2742C8742BE00ED2CAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */,
 				DFAED2742C8742BE00ED2CAD /* ContentView.swift */,
+				C0D5EF7E2CA27BFE00047514 /* PointPageView.swift */,
 				DFAED2762C8742BE00ED2CAD /* User.swift */,
 				DFAED2782C8742C100ED2CAD /* Assets.xcassets */,
 				DFAED27A2C8742C100ED2CAD /* Preview Content */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D5EF7F2CA27BFE00047514 /* PointPageView.swift in Sources */,
 				DFED9A9F2C8DE1B9000A82D8 /* DailyView.swift in Sources */,
 				DFAED2752C8742BE00ED2CAD /* ContentView.swift in Sources */,
 				DFAED28B2C87829B00ED2CAD /* RoutinesView.swift in Sources */,
