@@ -7,43 +7,15 @@ struct ContentView: View {
     @State private var currentUser: User? // To hold the authenticated user's data
 
     var body: some View {
-        NavigationView {
-            VStack(spacing: 20) {
-                if isAuthenticated {
-                    RoutinesView(isAuthenticated: $isAuthenticated) // Navigate to the Routines page
-                } else {
-                    VStack(spacing: 20) {
-                        Text("Welcome to AchieveMate")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .padding()
-
-                        NavigationLink(destination: SignUpSignInView(isAuthenticated: $isAuthenticated)) {
-                            Text("Get Started")
-                                .font(.headline)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-
-                        NavigationLink(destination: InstructionsView()) {
-                            Text("Instructions")
-                                .font(.headline)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                    }
-                    .padding()
-                }
+        Group {
+            if isAuthenticated {
+                AppTabView(isAuthenticated: $isAuthenticated)
+            } else {
+                AuthView(isAuthenticated: $isAuthenticated)
             }
-            .onAppear {
-                checkIfAuthenticated()
-            }
+        }
+        .onAppear {
+            checkIfAuthenticated()
         }
     }
 

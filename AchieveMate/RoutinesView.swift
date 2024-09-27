@@ -64,10 +64,6 @@ struct RoutinesView: View {
                 .padding(.bottom, 20)
             }
             .navigationBarItems(
-                leading: NavigationLink(destination: AccountSettingsView()) {
-                    Text("Account Settings")
-                        .foregroundColor(.orange)
-                },
                 trailing: Button(action: {
                     self.selectedRoutine = nil
                     self.showingAddRoutineView = true

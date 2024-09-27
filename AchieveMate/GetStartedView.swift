@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SignUpSignInView: View {
+struct GetStartedView: View {
     @Binding var isAuthenticated: Bool
 
     var body: some View {
@@ -35,6 +35,6 @@ struct SignUpSignInView: View {
 
 struct SignUpSignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpSignInView(isAuthenticated: .constant(false))
+        GetStartedView(isAuthenticated: .constant(false))
     }
 }

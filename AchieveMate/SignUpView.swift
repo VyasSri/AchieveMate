@@ -3,6 +3,7 @@ import SwiftData
 
 struct SignUpView: View {
     @Binding var isAuthenticated: Bool
+    @State private var showingAlert = false
     @Environment(\.modelContext) private var modelContext
     @State private var newUser = User(name: "", email: "", password: "") // User model
 
@@ -23,6 +24,9 @@ struct SignUpView: View {
                 .cornerRadius(5)
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
+                .alert("Invalid Email", isPresented: $showingAlert) {
+                    Button("OK", role: .cancel) { }
+                }
 
             SecureField("Password", text: $newUser.password)
                 .padding()
@@ -30,7 +34,11 @@ struct SignUpView: View {
                 .cornerRadius(5)
 
             Button(action: {
-                signUp()
+                if (isValidEmail(newUser.email)) {
+                    signUp()
+                } else {
+                    showingAlert = true
+                }
             }) {
                 Text("Create Account")
                     .font(.headline)
@@ -43,6 +51,13 @@ struct SignUpView: View {
             .padding(.top, 20)
         }
         .padding()
+    }
+    
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
     
     private func signUp() {
