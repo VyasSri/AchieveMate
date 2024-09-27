@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct LeaderboardPlayer: View {
+    var place: Int
     var username: String
     var points: Int
     var body: some View {
-        Text("\(username) | \(points)")
-            .font(.headline)
-            .fontDesign(.monospaced)
-            .fontWeight(.bold)
-            .padding(8)
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(5)
-            .frame(width: 352, height: 44)
+        HStack {
+            Text("\(place)")
+            Circle()
+                .frame(width: 44, height: 44)
+            Text("\(username)")
+                .font(.title3)
+            Spacer()
+            Text("\(points) pts")
+        }
+        .font(.headline)
+        .fontDesign(.monospaced)
+        .fontWeight(.bold)
+        .padding(8)
+        .frame(maxWidth: .infinity)
+        //.background(Color.blue)
+        .foregroundColor(Color("RevBackgroundClr"))
+        .frame(maxWidth: .infinity)
     }
 }
 
 #Preview {
-    LeaderboardPlayer(username: "Thomas", points: 1000)
+    LeaderboardPlayer(place: 1, username: "Thomas", points: 1000)
 }

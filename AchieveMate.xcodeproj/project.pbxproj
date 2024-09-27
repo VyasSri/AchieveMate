@@ -68,18 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				DFAED2742C8742BE00ED2CAD /* ContentView.swift */,
-				937DE15B2CA69BB900FAD330 /* AppTabView.swift */,
 				937DE1592CA698B200FAD330 /* AuthView.swift */,
-				DFAED2882C87809A00ED2CAD /* SignInView.swift */,
-				DFAED2862C87808F00ED2CAD /* SignUpView.swift */,
-				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
-				DFED9AA02C8DFA63000A82D8 /* AccountSettingsView.swift */,
-				DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */,
-				DFAED2842C877E0600ED2CAD /* InstructionsView.swift */,
+				937DE15B2CA69BB900FAD330 /* AppTabView.swift */,
 				DFAED28A2C87829B00ED2CAD /* RoutinesView.swift */,
-				DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */,
-				93B1890E2CA6EFF8003065E4 /* LeaderboardView.swift */,
 				C0D5EF7E2CA27BFE00047514 /* PointsPageView.swift */,
+				93B1890E2CA6EFF8003065E4 /* LeaderboardView.swift */,
+				DFED9AA02C8DFA63000A82D8 /* AccountSettingsView.swift */,
+				DFAED2842C877E0600ED2CAD /* InstructionsView.swift */,
+				93B189162CA6FA2E003065E4 /* SubViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +96,42 @@
 				DFAED2762C8742BE00ED2CAD /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		93B189162CA6FA2E003065E4 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				93B189172CA6FA63003065E4 /* AuthView */,
+				93B189182CA6FA6F003065E4 /* RoutineView */,
+				93B189192CA6FA83003065E4 /* PointsPageView */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		93B189172CA6FA63003065E4 /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED2882C87809A00ED2CAD /* SignInView.swift */,
+				DFAED2862C87808F00ED2CAD /* SignUpView.swift */,
+			);
+			path = AuthView;
+			sourceTree = "<group>";
+		};
+		93B189182CA6FA6F003065E4 /* RoutineView */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */,
+			);
+			path = RoutineView;
+			sourceTree = "<group>";
+		};
+		93B189192CA6FA83003065E4 /* PointsPageView */ = {
+			isa = PBXGroup;
+			children = (
+				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
+				DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */,
+			);
+			path = PointsPageView;
 			sourceTree = "<group>";
 		};
 		DFAED2662C8742BE00ED2CAD = {

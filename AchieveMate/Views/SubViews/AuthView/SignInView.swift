@@ -37,12 +37,14 @@ struct SignInView: View {
                 signIn()
             }) {
                 Text("Sign In")
-                    .font(.headline)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .font(.title3)
+                    .fontDesign(.monospaced)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color("BackgroundClr"))
+                    .padding(8)
+                    .frame(width: 352, height: 44)
+                    .background(Color("RevBackgroundClr"))
+                    .cornerRadius(5)
             }
             .padding(.top, 20)
         }

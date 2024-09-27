@@ -7,7 +7,9 @@ struct ContentView: View {
     @State private var currentUser: User? // To hold the authenticated user's data
 
     var body: some View {
-        Group {
+        ZStack {
+            Color("BackgroundClr")
+                .ignoresSafeArea()
             if isAuthenticated {
                 //Check if new if so go to InstructionsView(Maybe we can make it interactive)
                 AppTabView(isAuthenticated: $isAuthenticated)

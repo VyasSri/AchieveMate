@@ -17,6 +17,7 @@ struct PointsPageView: View {
             //var User: User = User.shared
             VStack(spacing: 30) {
                 // Title for the Points Page
+                Spacer()
                 Text("Your Points")
                     .font(.largeTitle)
                     .fontWeight(.bold)

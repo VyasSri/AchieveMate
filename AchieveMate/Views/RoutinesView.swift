@@ -48,6 +48,8 @@ struct RoutinesView: View {
                 }
 
                 Spacer()
+                
+                
             }
             .navigationBarItems(
                 trailing: Button(action: {
@@ -102,4 +104,8 @@ struct RoutinesView: View {
             print("Error saving routines: \(error)")
         }
     }
+}
+
+#Preview {
+    RoutinesView(isAuthenticated: .constant(false));
 }

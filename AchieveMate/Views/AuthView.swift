@@ -19,8 +19,8 @@ struct AuthView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(width: 230, height: 230)
-                    .foregroundColor(.white)
-                    .background(Color.black)
+                    .background(Color("RevBackgroundClr"))
+                    .foregroundColor(Color("BackgroundClr"))
                 
                 Text("AchieveMate")
                     .font(.largeTitle)
@@ -36,26 +36,23 @@ struct AuthView: View {
                         .font(.title3)
                         .fontDesign(.monospaced)
                         .fontWeight(.bold)
+                        .foregroundColor(Color("BackgroundClr"))
                         .padding(8)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(5)
                         .frame(width: 352, height: 44)
+                        .background(Color("RevBackgroundClr"))
+                        .cornerRadius(5)
                 }
                 
                 Text("- or -")
                     .font(.subheadline)
                     .fontDesign(.monospaced)
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.black)
                 
                 NavigationLink(destination: SignUpView(isAuthenticated: $isAuthenticated)) {
                     Text("Sign up")
                         .font(.headline)
                         .fontDesign(.monospaced)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("RevBackgroundClr"))
                 }
                 
                 Spacer()

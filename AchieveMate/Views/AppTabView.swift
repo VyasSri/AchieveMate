@@ -44,6 +44,7 @@ struct AppTabView: View {
             }
             .toolbar(.visible, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
+            .accentColor(Color("RevBackgroundClr"))
         }
     }
 }
