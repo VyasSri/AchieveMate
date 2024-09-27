@@ -28,8 +28,6 @@ struct RoutinesView: View {
                                 VStack(alignment: .leading) {
                                     Text(routine.name)
                                         .font(.headline)
-                                    Text("Duration: \(routine.duration) min, Frequency: \(routine.frequencyPerWeek) times/week")
-                                        .font(.subheadline)
                                     Text("Importance: \(routine.importanceLevel.rawValue)")
                                         .font(.subheadline)
                                     Text("Days: \(routine.specificDays.joined(separator: ", "))")

@@ -10,7 +10,6 @@ class Routine: Identifiable {
     var id: UUID
     var name: String
     var duration: Int
-    var frequencyPerWeek: Int
     var specificDays: [String]
     var importanceLevelRawValue: String // Store raw value instead of enum
     var isCompleted: Bool = false // New flag to track completion
@@ -25,11 +24,10 @@ class Routine: Identifiable {
         }
     }
 
-    init(id: UUID = UUID(), name: String, duration: Int, frequencyPerWeek: Int, specificDays: [String], importanceLevel: ImportanceLevel) {
+    init(id: UUID = UUID(), name: String, duration: Int, specificDays: [String], importanceLevel: ImportanceLevel) {
         self.id = id
         self.name = name
         self.duration = duration
-        self.frequencyPerWeek = frequencyPerWeek
         self.specificDays = specificDays
         self.importanceLevelRawValue = importanceLevel.rawValue
         self.isCompleted = false // Default is not completed

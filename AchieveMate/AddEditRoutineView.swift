@@ -9,10 +9,9 @@ struct AddEditRoutineView: View {
 
     @State private var name: String = ""
     @State private var duration: Double = 30
-    @State private var frequencyPerWeek: Int = 1
     @State private var selectedDays: [Bool] = Array(repeating: false, count: 7)
     @State private var importanceLevel: String = "Medium"
-    @State private var showAlert = false
+    @State private var showAlert = false //Currently unused
     @State private var alertMessage = ""
 
     let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -26,9 +25,6 @@ struct AddEditRoutineView: View {
                         Text("Duration: \(Int(duration)) minutes")
                         Slider(value: $duration, in: 1...120, step: 1)
                     }
-                    Stepper(value: $frequencyPerWeek, in: 1...7) {
-                        Text("Frequency: \(frequencyPerWeek) times per week")
-                    }
                     VStack(alignment: .leading) {
                         Text("Specific Days")
                         ForEach(0..<daysOfWeek.count, id: \.self) { index in
@@ -37,12 +33,15 @@ struct AddEditRoutineView: View {
                             }
                         }
                     }
-                    Picker("Importance Level", selection: $importanceLevel) {
-                        Text("Low").tag("Low")
-                        Text("Medium").tag("Medium")
-                        Text("High").tag("High")
+                    VStack() {
+                        Text("Importance")
+                        Picker("Importance Level", selection: $importanceLevel) {
+                            Text("Low").tag("Low")
+                            Text("Medium").tag("Medium")
+                            Text("High").tag("High")
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
                     }
-                    .pickerStyle(SegmentedPickerStyle())
                 }
 
                 Button(action: validateAndSaveRoutine) {
@@ -85,7 +84,6 @@ struct AddEditRoutineView: View {
                 if let routine = routine {
                     name = routine.name
                     duration = Double(routine.duration)
-                    frequencyPerWeek = routine.frequencyPerWeek
                     selectedDays = daysOfWeek.map { routine.specificDays.contains($0) }
                     importanceLevel = routine.importanceLevel.rawValue
                 }
@@ -96,11 +94,10 @@ struct AddEditRoutineView: View {
     private func validateAndSaveRoutine() {
         let selectedDaysArray = zip(daysOfWeek, selectedDays).compactMap { $1 ? $0 : nil }
 
-        if selectedDaysArray.count != frequencyPerWeek {
-            alertMessage = "The number of selected days (\(selectedDaysArray.count)) must match the frequency per week (\(frequencyPerWeek))."
-            showAlert = true
-        } else {
+        if true {
             saveRoutine(selectedDaysArray: selectedDaysArray)
+        } else {
+            showAlert = true
         }
     }
 
@@ -109,10 +106,10 @@ struct AddEditRoutineView: View {
 
         if let editingRoutine = routine {
             if let index = user.routines.firstIndex(where: { $0.id == editingRoutine.id }) {
-                user.routines[index] = Routine(id: editingRoutine.id, name: name, duration: Int(duration), frequencyPerWeek: frequencyPerWeek, specificDays: selectedDaysArray, importanceLevel: ImportanceLevel(rawValue: importanceLevel)!)
+                user.routines[index] = Routine(id: editingRoutine.id, name: name, duration: Int(duration), specificDays: selectedDaysArray, importanceLevel: ImportanceLevel(rawValue: importanceLevel)!)
             }
         } else {
-            let newRoutine = Routine(name: name, duration: Int(duration), frequencyPerWeek: frequencyPerWeek, specificDays: selectedDaysArray, importanceLevel: ImportanceLevel(rawValue: importanceLevel)!)
+            let newRoutine = Routine(name: name, duration: Int(duration), specificDays: selectedDaysArray, importanceLevel: ImportanceLevel(rawValue: importanceLevel)!)
             user.routines.append(newRoutine)
         }
 
