@@ -28,7 +28,7 @@ struct AppTabView: View {
                     }
                     .tag(1)
                 
-                AccountSettingsView()
+                AccountSettingsView(isAuthenticated: $isAuthenticated)
                     .tabItem {
                         Image(systemName: "gearshape")
                         Text("Settings")

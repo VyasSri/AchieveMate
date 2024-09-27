@@ -9,6 +9,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if isAuthenticated {
+                //Check if new if so go to InstructionsView(Maybe we can make it interactive)
                 AppTabView(isAuthenticated: $isAuthenticated)
             } else {
                 AuthView(isAuthenticated: $isAuthenticated)

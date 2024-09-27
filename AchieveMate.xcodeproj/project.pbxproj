@@ -15,7 +15,6 @@
 		DFAED2772C8742BE00ED2CAD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2762C8742BE00ED2CAD /* User.swift */; };
 		DFAED2792C8742C100ED2CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAED2782C8742C100ED2CAD /* Assets.xcassets */; };
 		DFAED27C2C8742C100ED2CAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAED27B2C8742C100ED2CAD /* Preview Assets.xcassets */; };
-		DFAED2832C877DE600ED2CAD /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2822C877DE600ED2CAD /* GetStartedView.swift */; };
 		DFAED2852C877E0600ED2CAD /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2842C877E0600ED2CAD /* InstructionsView.swift */; };
 		DFAED2872C87808F00ED2CAD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2862C87808F00ED2CAD /* SignUpView.swift */; };
 		DFAED2892C87809A00ED2CAD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2882C87809A00ED2CAD /* SignInView.swift */; };
@@ -38,7 +37,6 @@
 		DFAED2762C8742BE00ED2CAD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DFAED2782C8742C100ED2CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFAED27B2C8742C100ED2CAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DFAED2822C877DE600ED2CAD /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		DFAED2842C877E0600ED2CAD /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		DFAED2862C87808F00ED2CAD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DFAED2882C87809A00ED2CAD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				DFAED2762C8742BE00ED2CAD /* User.swift */,
 				DFAED2782C8742C100ED2CAD /* Assets.xcassets */,
 				DFAED27A2C8742C100ED2CAD /* Preview Content */,
-				DFAED2822C877DE600ED2CAD /* GetStartedView.swift */,
 				DFAED2842C877E0600ED2CAD /* InstructionsView.swift */,
 				937DE1592CA698B200FAD330 /* AuthView.swift */,
 				DFAED2862C87808F00ED2CAD /* SignUpView.swift */,
@@ -191,7 +188,6 @@
 				DFAED2852C877E0600ED2CAD /* InstructionsView.swift in Sources */,
 				DFAED2772C8742BE00ED2CAD /* User.swift in Sources */,
 				DFAED28D2C8782F800ED2CAD /* Routine.swift in Sources */,
-				DFAED2832C877DE600ED2CAD /* GetStartedView.swift in Sources */,
 				937DE15C2CA69BB900FAD330 /* AppTabView.swift in Sources */,
 				DFED9AA32C9100F9000A82D8 /* WeekPlanView.swift in Sources */,
 				DFAED2872C87808F00ED2CAD /* SignUpView.swift in Sources */,

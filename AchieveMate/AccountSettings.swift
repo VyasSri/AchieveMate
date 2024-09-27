@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct AccountSettingsView: View {
+    @Binding var isAuthenticated: Bool
     @Environment(\.modelContext) private var modelContext
     @State private var newPassword: String = ""
     @State private var currentUser: User?
@@ -115,9 +116,6 @@ struct AccountSettingsView: View {
         // Delete the user from the CoreData context
         modelContext.delete(user)
 
-        // Remove userId from UserDefaults (for logging out)
-        UserDefaults.standard.removeObject(forKey: "userId")
-
         // Save the changes
         do {
             try modelContext.save()
@@ -125,6 +123,11 @@ struct AccountSettingsView: View {
         } catch {
             print("Error deleting account: \(error)")
         }
+        
+        // Remove userId from UserDefaults (for logging out)
+        UserDefaults.standard.removeObject(forKey: "userId")
+        
+        isAuthenticated = false;
     }
 
     // Logout function
@@ -132,7 +135,7 @@ struct AccountSettingsView: View {
         // Remove userId from UserDefaults
         UserDefaults.standard.removeObject(forKey: "userId")
 
-        // Optional: Redirect to login or sign-in view
+        isAuthenticated = false;
     }
 
     // Load the current user based on the stored userId
@@ -153,6 +156,6 @@ struct AccountSettingsView: View {
 
 struct AccountSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountSettingsView()
+        AccountSettingsView(isAuthenticated: .constant(false))
     }
 }
