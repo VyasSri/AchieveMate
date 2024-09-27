@@ -48,18 +48,6 @@ struct RoutinesView: View {
                 }
 
                 Spacer()
-
-                // "Next" button to navigate to the DailyView at the bottom
-                NavigationLink(destination: DailyView()) {
-                    Text("View Today's Routines")
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.bottom, 20)
             }
             .navigationBarItems(
                 trailing: Button(action: {

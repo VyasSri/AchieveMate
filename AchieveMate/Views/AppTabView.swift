@@ -14,19 +14,26 @@ struct AppTabView: View {
     var body: some View {
         ZStack {
             TabView(selection: $selectedTab) {
-                RoutinesView(isAuthenticated: $isAuthenticated)
+                PointsPageView()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")
                     }
+                    .tag(1)
+                
+                RoutinesView(isAuthenticated: $isAuthenticated)
+                    .tabItem {
+                        Image(systemName: "plus")
+                        Text("Add")
+                    }
                     .tag(0)
                 
-                PointsPageView()
+                LeaderboardView()
                     .tabItem {
-                        Image(systemName: "trophy")
-                        Text("Points")
+                        Image(systemName: "list.bullet.clipboard")
+                        Text("Leaderboard")
                     }
-                    .tag(1)
+                    .tag(0)
                 
                 AccountSettingsView(isAuthenticated: $isAuthenticated)
                     .tabItem {

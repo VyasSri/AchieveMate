@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		937DE15A2CA698B300FAD330 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DE1592CA698B200FAD330 /* AuthView.swift */; };
 		937DE15C2CA69BB900FAD330 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937DE15B2CA69BB900FAD330 /* AppTabView.swift */; };
+		93B1890F2CA6EFF8003065E4 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1890E2CA6EFF8003065E4 /* LeaderboardView.swift */; };
+		93B189152CA6F4D2003065E4 /* LeaderboardPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B189142CA6F4D2003065E4 /* LeaderboardPlayer.swift */; };
 		C0D5EF7F2CA27BFE00047514 /* PointsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5EF7E2CA27BFE00047514 /* PointsPageView.swift */; };
 		DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */; };
 		DFAED2752C8742BE00ED2CAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2742C8742BE00ED2CAD /* ContentView.swift */; };
@@ -23,13 +25,15 @@
 		DFAED28F2C87831A00ED2CAD /* AddEditRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */; };
 		DFAED2912C87833700ED2CAD /* MultiSelectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */; };
 		DFED9A9F2C8DE1B9000A82D8 /* DailyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */; };
-		DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */; };
+		DFED9AA12C8DFA63000A82D8 /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA02C8DFA63000A82D8 /* AccountSettingsView.swift */; };
 		DFED9AA32C9100F9000A82D8 /* WeekPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		937DE1592CA698B200FAD330 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		937DE15B2CA69BB900FAD330 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		93B1890E2CA6EFF8003065E4 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		93B189142CA6F4D2003065E4 /* LeaderboardPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardPlayer.swift; sourceTree = "<group>"; };
 		C0D5EF7E2CA27BFE00047514 /* PointsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsPageView.swift; sourceTree = "<group>"; };
 		DFAED26F2C8742BE00ED2CAD /* AchieveMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AchieveMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchieveMateApp.swift; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 		DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRoutineView.swift; sourceTree = "<group>"; };
 		DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectPicker.swift; sourceTree = "<group>"; };
 		DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
-		DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettings.swift; sourceTree = "<group>"; };
+		DFED9AA02C8DFA63000A82D8 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93B189102CA6F412003065E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED2742C8742BE00ED2CAD /* ContentView.swift */,
+				937DE15B2CA69BB900FAD330 /* AppTabView.swift */,
+				937DE1592CA698B200FAD330 /* AuthView.swift */,
+				DFAED2882C87809A00ED2CAD /* SignInView.swift */,
+				DFAED2862C87808F00ED2CAD /* SignUpView.swift */,
+				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
+				DFED9AA02C8DFA63000A82D8 /* AccountSettingsView.swift */,
+				DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */,
+				DFAED2842C877E0600ED2CAD /* InstructionsView.swift */,
+				DFAED28A2C87829B00ED2CAD /* RoutinesView.swift */,
+				DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */,
+				93B1890E2CA6EFF8003065E4 /* LeaderboardView.swift */,
+				C0D5EF7E2CA27BFE00047514 /* PointsPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93B189112CA6F42C003065E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */,
+				93B189142CA6F4D2003065E4 /* LeaderboardPlayer.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		93B189132CA6F49B003065E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFAED28C2C8782F800ED2CAD /* Routine.swift */,
+				DFAED2762C8742BE00ED2CAD /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DFAED2662C8742BE00ED2CAD = {
 			isa = PBXGroup;
 			children = (
@@ -80,23 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				DFAED2722C8742BE00ED2CAD /* AchieveMateApp.swift */,
-				DFAED2742C8742BE00ED2CAD /* ContentView.swift */,
-				937DE15B2CA69BB900FAD330 /* AppTabView.swift */,
-				C0D5EF7E2CA27BFE00047514 /* PointsPageView.swift */,
-				DFAED2762C8742BE00ED2CAD /* User.swift */,
+				93B189102CA6F412003065E4 /* Views */,
+				93B189132CA6F49B003065E4 /* Models */,
+				93B189112CA6F42C003065E4 /* Components */,
 				DFAED2782C8742C100ED2CAD /* Assets.xcassets */,
 				DFAED27A2C8742C100ED2CAD /* Preview Content */,
-				DFAED2842C877E0600ED2CAD /* InstructionsView.swift */,
-				937DE1592CA698B200FAD330 /* AuthView.swift */,
-				DFAED2862C87808F00ED2CAD /* SignUpView.swift */,
-				DFAED2882C87809A00ED2CAD /* SignInView.swift */,
-				DFAED28A2C87829B00ED2CAD /* RoutinesView.swift */,
-				DFAED28C2C8782F800ED2CAD /* Routine.swift */,
-				DFAED28E2C87831A00ED2CAD /* AddEditRoutineView.swift */,
-				DFAED2902C87833700ED2CAD /* MultiSelectPicker.swift */,
-				DFED9A9E2C8DE1B9000A82D8 /* DailyView.swift */,
-				DFED9AA02C8DFA63000A82D8 /* AccountSettings.swift */,
-				DFED9AA22C9100F9000A82D8 /* WeekPlanView.swift */,
 			);
 			path = AchieveMate;
 			sourceTree = "<group>";
@@ -187,13 +217,15 @@
 				DFAED28F2C87831A00ED2CAD /* AddEditRoutineView.swift in Sources */,
 				DFAED2852C877E0600ED2CAD /* InstructionsView.swift in Sources */,
 				DFAED2772C8742BE00ED2CAD /* User.swift in Sources */,
+				93B1890F2CA6EFF8003065E4 /* LeaderboardView.swift in Sources */,
 				DFAED28D2C8782F800ED2CAD /* Routine.swift in Sources */,
 				937DE15C2CA69BB900FAD330 /* AppTabView.swift in Sources */,
 				DFED9AA32C9100F9000A82D8 /* WeekPlanView.swift in Sources */,
 				DFAED2872C87808F00ED2CAD /* SignUpView.swift in Sources */,
-				DFED9AA12C8DFA63000A82D8 /* AccountSettings.swift in Sources */,
+				DFED9AA12C8DFA63000A82D8 /* AccountSettingsView.swift in Sources */,
 				937DE15A2CA698B300FAD330 /* AuthView.swift in Sources */,
 				DFAED2732C8742BE00ED2CAD /* AchieveMateApp.swift in Sources */,
+				93B189152CA6F4D2003065E4 /* LeaderboardPlayer.swift in Sources */,
 				DFAED2912C87833700ED2CAD /* MultiSelectPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

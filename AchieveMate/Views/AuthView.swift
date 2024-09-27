@@ -21,6 +21,7 @@ struct AuthView: View {
                     .frame(width: 230, height: 230)
                     .foregroundColor(.white)
                     .background(Color.black)
+                
                 Text("AchieveMate")
                     .font(.largeTitle)
                     .fontDesign(.monospaced)
@@ -40,6 +41,7 @@ struct AuthView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(5)
+                        .frame(width: 352, height: 44)
                 }
                 
                 Text("- or -")
